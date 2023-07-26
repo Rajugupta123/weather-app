@@ -25,9 +25,13 @@
 }
 .weather{
     z-index: 2;
-    background-color: white;
+    /* background-color: white; */
+    color: #fff;
     display: flex;
     align-items: center;
+}
+.weather div{
+    margin:0.5rem;
 }
 .weather1{
     font-size: 4rem;
@@ -36,8 +40,16 @@
     font-size: 2rem;
 }
 .weather span{
-    font-size: 0.75rem;
+    font-size: 1rem;
 }
+.weather3{
+    margin: 0.5rem;
+}
+.weather3 img{
+    width: 1.8rem;
+    margin-bottom: 0;
+}
+
 nav{
     height: 120px;
     position: absolute;
