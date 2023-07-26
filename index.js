@@ -4,10 +4,11 @@ const dateField = document.querySelector(".weather2 span");
 const emojiField = document.querySelector(".weather3 img");
 const weatherField = document.querySelector(".weather3 span");
 
-// const searchField = document.querySelector(".searchField");
-// const form = document.querySelector("form");
+const searchField = document.querySelector(".searchField");
+const form = document.querySelector("form");
 
 let target = "Kathmandu"
+
 const fetchData=async()=>{
     const url = `https://api.weatherapi.com/v1/current.json?key=5b27a6ef3547402582e62007222306&q=${target}`;
 
@@ -69,3 +70,12 @@ function getFullDayName(num){
             return "don't know";
     }
 }
+
+
+
+form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    target = searchField.value;
+    // console.log(target);
+    fetchData();
+});
